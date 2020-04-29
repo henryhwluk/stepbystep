@@ -16,7 +16,7 @@
 		B81E29C32419396700FA83CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B81E29C22419396700FA83CF /* main.m */; };
 		B81E29CF2419399A00FA83CF /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81E29CB2419399A00FA83CF /* ChartViewController.m */; };
 		B81E29D02419399A00FA83CF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81E29CD2419399A00FA83CF /* MainViewController.m */; };
-		B81E29D724193CAC00FA83CF /* SSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81E29D624193CAC00FA83CF /* SSViewController.swift */; };
+		B81E29E1241B3C1500FA83CF /* SSSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81E29E0241B3C1500FA83CF /* SSSViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,7 +51,7 @@
 		B81E29CD2419399A00FA83CF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		B81E29CE2419399A00FA83CF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		B81E29D524193CAC00FA83CF /* stepbystep-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "stepbystep-Bridging-Header.h"; sourceTree = "<group>"; };
-		B81E29D624193CAC00FA83CF /* SSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSViewController.swift; sourceTree = "<group>"; };
+		B81E29E0241B3C1500FA83CF /* SSSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSSViewController.swift; sourceTree = "<group>"; };
 		DBA6220C27436763B826D3F2 /* Pods-stepbystep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stepbystep.debug.xcconfig"; path = "Target Support Files/Pods-stepbystep/Pods-stepbystep.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,8 +117,8 @@
 				B81E29C12419396700FA83CF /* Info.plist */,
 				B81E29C22419396700FA83CF /* main.m */,
 				B81E29AE2419396500FA83CF /* Products */,
-				B81E29D624193CAC00FA83CF /* SSViewController.swift */,
 				B81E29D524193CAC00FA83CF /* stepbystep-Bridging-Header.h */,
+				B81E29E0241B3C1500FA83CF /* SSSViewController.swift */,
 			);
 			path = stepbystep;
 			sourceTree = "<group>";
@@ -259,9 +259,9 @@
 			files = (
 				B81E29CF2419399A00FA83CF /* ChartViewController.m in Sources */,
 				B81E29D02419399A00FA83CF /* MainViewController.m in Sources */,
+				B81E29E1241B3C1500FA83CF /* SSSViewController.swift in Sources */,
 				B81E29B82419396500FA83CF /* ViewController.m in Sources */,
 				B81E29B22419396500FA83CF /* AppDelegate.m in Sources */,
-				B81E29D724193CAC00FA83CF /* SSViewController.swift in Sources */,
 				B81E29C32419396700FA83CF /* main.m in Sources */,
 				B81E29B52419396500FA83CF /* SceneDelegate.m in Sources */,
 			);

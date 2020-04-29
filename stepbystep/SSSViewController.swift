@@ -1,14 +1,14 @@
 //
-//  SSViewController.swift
+//  SSSViewController.swift
 //  stepbystep
 //
-//  Created by henvy on 2020/3/11.
+//  Created by henvy on 2020/3/13.
 //  Copyright © 2020 henvy. All rights reserved.
 //
 
 import UIKit
 
-class SSViewController: UIViewController {
+class SSSViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

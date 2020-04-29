@@ -8,7 +8,7 @@
 
 #import "ChartViewController.h"
 #import "stepbystep-Bridging-Header.h"
-
+//#import "XAxisLogRenderer-Swift.h"
 @interface ChartViewController ()  <ChartViewDelegate>
 @property (nonatomic, strong) LineChartView *chartView;
 
@@ -20,7 +20,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
 
-    self.title = @"三月份每日公司爬九楼192阶楼梯时长统计图";
+    self.title = @"9楼192阶-每日跑楼梯时长统计图";
 
     _chartView = [[LineChartView alloc] initWithFrame:CGRectMake(50, 100, UIScreen.mainScreen.bounds.size.width - 70, UIScreen.mainScreen.bounds.size.height - 200)];
     _chartView.backgroundColor = [UIColor whiteColor];
@@ -30,14 +30,18 @@
 
     _chartView.delegate                       = self;
       
-    _chartView.chartDescription.enabled       = NO;
-      
+    _chartView.chartDescription.enabled       = YES;
+    _chartView.legend.enabled                 = YES;
+    _chartView.chartDescription.text          = @"henvy`s charts demo";
+
     _chartView.leftAxis.enabled               = NO;
     _chartView.rightAxis.drawAxisLineEnabled  = NO;
     _chartView.rightAxis.drawGridLinesEnabled = NO;
     _chartView.xAxis.drawAxisLineEnabled      = NO;
     _chartView.xAxis.drawGridLinesEnabled     = NO;
 
+    _chartView.xAxis.granularityEnabled       = YES;
+    _chartView.xAxis.granularity              = 1;
     _chartView.drawGridBackgroundEnabled      = NO;
     _chartView.drawBordersEnabled             = NO;
     _chartView.dragEnabled                    = YES;
@@ -55,91 +59,190 @@
     // Do any additional setup after loading the view.
 }
 - (void)setupData{
-   
-    NSArray *rowData = @[
-                         @{
-                             @"date": @"11",
-                             @"time": @"02:18:67",
-                             },
-                         @{
-                             @"date": @"12",
-                             @"time": @"02:10:29",
-                             },
-                         @{
-                             @"date": @"13",
-                             @"time": @"02:08:67",
-                             },
-                         @{
-                             @"date": @"14",
-                             @"time": @"02:03:29",
-                             },
-                         @{
-                            @"date": @"15",
-                            @"time": @"02:10:67",
-                            },
-                         
+//
+//    NSArray *rowData = @[
+//                         @{
+//                             @"date": @"11",
+//                             @"time": @"02:18:67",
+//                             },
+//                         @{
+//                             @"date": @"12",
+//                             @"time": @"02:10:29",
+//                             },
+//                         @{
+//                             @"date": @"13",
+//                             @"time": @"02:14:62",
+//                             },
+//                         @{
+//                             @"date": @"16",
+//                             @"time": @"02:04:43",
+//                             },
+//                         @{
+//                            @"date": @"17",
+//                            @"time": @"01:51:27",
+//                            },
+//                         @{
+//                             @"date": @"18",
+//                             @"time": @"01:56:04",
+//                             },
+//                         @{
+//                            @"date": @"19",
+//                            @"time": @"02:02:21",
+//                            },
+//                         @{
+//                            @"date": @"20",
+//                            @"time": @"02:02:60",
+//                            },
+//                         @{
+//                             @"date": @"23",
+//                             @"time": @"02:02:95",
+//                            },
+//                         @{
+//                            @"date": @"24",
+//                            @"time": @"01:55:29",
+//                           },
+//                         @{
+//                            @"date": @"25",
+//                            @"time": @"01:49:31",
+//                           },
+//                         @{
+//                            @"date": @"26",
+//                            @"time": @"01:50:44",
+//                           },
+//                         @{
+//                           @"date": @"27",
+//                           @"time": @"01:39:66",
+//                           },
+//                         ];
+
+   NSArray *rowData = @[
                         @{
-                            @"date": @"16",
-                            @"time": @"02:05:29",
+                            @"date": @"1",
+                            @"time": @"02:18:67",
                             },
                         @{
-                            @"date": @"17",
-                            @"time": @"02:03:67",
-                            },
-                        @{
-                            @"date": @"18",
+                            @"date": @"2",
                             @"time": @"02:10:29",
                             },
-                         @{
-                             @"date": @"19",
-                             @"time": @"02:07:67",
-                             },
-                         @{
-                             @"date": @"20",
-                             @"time": @"02:05:29",
-                             },
-                         @{
-                             @"date": @"21",
-                             @"time": @"02:03:67",
-                             },
-                         @{
-                             @"date": @"22",
-                             @"time": @"02:03:29",
-                             },
-                         @{
-                             @"date": @"23",
-                             @"time": @"02:03:67",
-                             },
-                         @{
-                             @"date": @"24",
-                             @"time": @"02:10:29",
-                             },
+                        @{
+                            @"date": @"3",
+                            @"time": @"02:14:62",
+                            },
+                        @{
+                            @"date": @"4",
+                            @"time": @"02:04:43",
+                            },
+                        @{
+                           @"date": @"5",
+                           @"time": @"01:51:27",
+                           },
+                        @{
+                            @"date": @"6",
+                            @"time": @"01:56:04",
+                            },
+                        @{
+                           @"date": @"7",
+                           @"time": @"02:02:21",
+                           },
+                        @{
+                           @"date": @"8",
+                           @"time": @"02:02:60",
+                           },
+                        @{
+                            @"date": @"9",
+                            @"time": @"02:02:95",
+                           },
+                        @{
+                           @"date": @"10",
+                           @"time": @"01:55:29",
+                          },
+                        @{
+                           @"date": @"11",
+                           @"time": @"01:49:31",
+                          },
+                        @{
+                           @"date": @"12",
+                           @"time": @"01:50:44",
+                          },
+                        @{
+                          @"date": @"13",
+                          @"time": @"01:39:66",
+                          },
+                        @{
+                          @"date": @"14",
+                          @"time": @"01:38:61",
+                         },
                           @{
-                              @"date": @"25",
-                              @"time": @"02:07:67",
-                              },
+                           @"date": @"15",
+                           @"time": @"01:43:17",
+                         },
                           @{
-                              @"date": @"26",
-                              @"time": @"02:05:29",
-                              },
-                          @{
-                              @"date": @"27",
-                              @"time": @"02:03:67",
-                              },
-                          @{
-                              @"date": @"28",
-                              @"time": @"02:03:29",
-                              },
-                         @{
-                             @"date": @"29",
-                             @"time": @"02:05:29",
-                             },
-                         @{
-                             @"date": @"30",
-                             @"time": @"02:03:67",
-                             },
-                         ];
-   
+                           @"date": @"16",
+                           @"time": @"01:40:38",
+                         },
+                        @{
+                          @"date": @"17",
+                          @"time": @"01:37:37",
+                        },
+                        @{
+                          @"date": @"18",
+                          @"time": @"01:43:38",
+                        },
+                        
+                        @{
+                          @"date": @"19",
+                          @"time": @"01:33:66",
+                        },
+                        
+                        @{
+                          @"date": @"20",
+                          @"time": @"01:55:01",
+                        },
+                        @{
+                                                 @"date": @"21",
+                                                 @"time": @"01:57:55",
+                                               },
+                        @{
+                                                 @"date": @"22",
+                                                 @"time": @"02:15:18",
+                                               },
+                        @{
+                                                 @"date": @"23",
+                                                 @"time": @"01:50:47",
+                                               },
+                        @{
+                                                 @"date": @"24",
+                                                 @"time": @"02:01:10",
+                                               },
+                        @{
+                                                 @"date": @"25",
+                                                 @"time": @"01:59:32",
+                                               },
+                        @{
+                                                 @"date": @"26",
+                                                 @"time": @"02:09:35",
+                                               },
+                        @{
+                                                 @"date": @"27",
+                                                 @"time": @"02:07:25",
+                                               },
+                        @{
+                                                 @"date": @"28",
+                                                 @"time": @"02:00:67",
+                                               },
+                        @{
+                                                 @"date": @"29",
+                                                 @"time": @"01:51:68",
+                                               },
+                        @{
+                                                 @"date": @"30",
+                                                 @"time": @"01:58:45",
+                                               },
+                        @{
+                                                 @"date": @"31",
+                                                 @"time": @"02:11:07",
+                                               },
+                        ];
     __block NSMutableArray *data = [NSMutableArray array];
     [rowData enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSMutableDictionary *day = [[NSMutableDictionary alloc] initWithDictionary:(NSDictionary *)obj];
@@ -177,7 +280,7 @@
             [values addObject:[[ChartDataEntry alloc] initWithX:x y:y]];
         }
         
-        LineChartDataSet *d = [[LineChartDataSet alloc] initWithEntries:values label:[NSString stringWithFormat:@"DataSet %d", z + 1]];
+        LineChartDataSet *d = [[LineChartDataSet alloc] initWithEntries:values label:[NSString stringWithFormat:@"天数/秒数"]];
         d.lineWidth = 5.0;
         d.circleRadius = 4.0;
         d.circleHoleRadius = 2.0;
@@ -185,6 +288,8 @@
         UIColor *color = colors[z % colors.count];
         [d setColor:color];
         [d setCircleColor:color];
+        [d setCircleColors: ChartColorTemplates.vordiplom];
+        d.mode = LineChartModeCubicBezier;
         [dataSets addObject:d];
     }
     
@@ -193,6 +298,7 @@
     ((LineChartDataSet *)dataSets[0]).circleColors = ChartColorTemplates.vordiplom;
     
     LineChartData *linedata = [[LineChartData alloc] initWithDataSets:dataSets];
+    
     [linedata setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:7.f]];
     _chartView.data = linedata;
     
